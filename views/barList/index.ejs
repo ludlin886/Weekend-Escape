@@ -12,19 +12,40 @@
       <a class="navbar-brand" href="#">Weekend Escape</a>
       <div class="topnav">
         <a href="/home">Home</a>
-        <a href="/about">About</a>
-        <a href="/barList">Post</a>
+        <a href="/home/about">About</a>
+        <a href="/home/barList/post">Post</a>
       </div>
     </nav>
-    <div class="container">
-      <div class="outer">
-        <class="details">
-          <h1><img src="bar photo/image1.jpg" alt="" /></h1>
-          <h2>this is bar list idex not detail page</h2>
 
-          <a href="/home/barList/detail">Detail page click here!</a>
-        </div>
-      </div>
-    </div>
+    <form id="new-bar" action="/barList" method="POST">
+      <label>Restaurant:</label>
+      <div><%= bars.name %></div>
+      <label>Address:</label>
+      <div><%= bars.address %></div>
+      <label>Dine In:</label>
+      <div><%= bars.dineIn ? 'Yes' : 'Nope' %></div>
+      <label>Cocktail:</label>
+      <div><%= bars.cocktail ? 'Yes' : 'Nope' %></div>
+      <label>happyhour:</label>
+      <div><%= bars.happyhour ? 'Yes' : 'Nope' %></div>
+      <label>Upload Date:</label>
+      <div><%= bars.uploadDate ? 'Yes' : 'Nope' %></div>
+    </form>
+    <form id="new-form" action="/movies" method="POST">
+      <label>Title:</label>
+      <input type="text" name="title" />
+      <label>Release Year:</label>
+      <input type="text" name="releaseYear" />
+      <label>MPAA Rating</label>
+      <select name="mpaaRating">
+        <option value="G">G</option>
+        <option value="PG">PG</option>
+        <option value="PG-13">PG-13</option>
+        <option value="R">R</option>
+      </select>
+      <label>Now Showing:</label>
+      <input type="checkbox" name="nowShowing" checked />
+      <input type="submit" value="Add Movie" />
+    </form>
   </body>
 </html>

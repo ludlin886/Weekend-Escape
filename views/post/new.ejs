@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="navbar-brand" href="/home">Weekend Escape</a>
+      <div class="topnav">
+        <a href="/home">Home</a>
+        <a href="/home/barlist">Bar List</a>
+      </div>
+    </naxv>
+    <form id="new-form" action="/barList/post" method="POST">
+      <label>Restaurant:</label>
+      <input type="text" name="restaurant" />
+      <label>Address:</label>
+      <input type="text" name="address" />
+
+      <label>Upload Date:</label>
+      <input type="date" name="uploaddate" />
+      <label>Dine In:</label>
+      <input type="checkbox" name="canDineIn" checked />
+      <label>Cocktail:</label>
+      <input type="checkbox" name="haveCocktail" checked />
+      <label>Happy Hour:</label>
+      <input type="checkbox" name="haveHappyHour" checked />
+      <select name="barRating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <input type="submit" value="Add Bar" />
+    </form>
+    <form id="new-form" action="/movies" method="POST">
+      <label>Title:</label>
+      <input type="text" name="title">
+      <label>Release Year:</label>
+      <input type="text" name="releaseYear">
+      <label>MPAA Rating</label>
+      <select name="mpaaRating">
+        <option value="G">G</option>
+        <option value="PG">PG</option>
+        <option value="PG-13">PG-13</option>
+        <option value="R">R</option>
+      </select>
+      <label>Now Showing:</label>
+      <input type="checkbox" name="nowShowing" checked>
+      <input type="submit" value="Add Movie">
+    </form>
+  </body>
+</html>

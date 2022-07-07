@@ -1,4 +1,4 @@
-const about = require("../models/about");
+// const about = require("../models/about");
 
 module.exports = {
   index,

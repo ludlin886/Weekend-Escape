@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/bar", {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect("mongodb://localhost/barlist", {});
 
 // shortcut to mongoose.connection object
 const db = mongoose.connection;
